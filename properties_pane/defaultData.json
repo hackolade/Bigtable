@@ -1,0 +1,35 @@
+{
+	"model": {
+		"modelName": "New model",
+		"dbVersion": "",
+		"dbVendor": "Bigtable",
+		"port": 9200
+	},
+	"container": {
+		"name": "New namespace",
+		"indexes": []
+	},
+	"collection": {
+		"collectionName": "New table",
+		"collectionUsers": [],
+		"collation": {}
+	},
+	"field": {
+		"name": "New column"
+	},
+	"patternField": {
+		"name": "^[a-zA-Z0-9_.-]+$"
+	},
+	"multipleField": {
+		"primaryKey": false
+	},
+	"subschema": {},
+	"arrayItem": {},
+	"choice": {},
+	"relationship": {},
+	"user": {},
+	"view": {
+		"viewOn": "",
+		"pipeline": ""
+	}
+}

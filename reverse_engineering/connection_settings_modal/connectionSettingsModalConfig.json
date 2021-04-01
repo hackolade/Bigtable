@@ -1,0 +1,105 @@
+[
+	{
+		"lowerTab": "Connection",
+		"structure": [
+			{
+				"inputLabel": "Name",
+				"inputKeyword": "name",
+				"inputType": "text",
+				"inputPlaceholder": "Name"
+				
+			},
+			{
+				"inputLabel": "Host",
+				"inputKeyword": "host",
+				"inputType": "text"
+			},
+			{
+				"inputLabel": "Port",
+				"inputKeyword": "port",
+				"inputType": "numeric"
+			},
+			{
+				"inputLabel": "HTTPS",
+				"inputKeyword": "https",
+				"inputType": "checkbox"
+			}
+		]
+	},
+	{
+		"lowerTab": "Authentication",
+		"structure": [
+			{
+				"inputLabel": "Authentication",
+				"inputKeyword": "auth",
+				"inputType": "select",
+				"options": [{
+					"value": "none",
+					"label": "None"
+				}, {
+					"value": "kerberos",
+					"label": "Kerberos"
+				}],
+				"defaultValue": "none"
+			},
+			{
+				"inputLabel": "Principal",
+				"inputKeyword": "principal",
+				"inputType": "text",
+				"inputPlaceholder": "{username}@{REALM}",
+				"dependency": {
+					"key": "auth",
+					"value": "kerberos"
+				}
+			},
+			{
+				"inputLabel": "Password",
+				"inputKeyword": "password",
+				"inputType": "password",
+				"dependency": {
+					"key": "auth",
+					"value": "kerberos"
+				},
+				"isHiddenKey": true
+			}
+		]
+	},
+	{
+		"lowerTab": "SSL",
+		"structure": [
+			{
+				"inputLabel": "Certificate Authority",
+				"inputKeyword": "sslCaFile",
+				"inputType": "file",
+				"inputPlaceholder": "Certificate Authority",
+				"extensions": ["pem", "crt", "key"],
+				"dependency": {
+					"key": "https",
+					"value": true
+				}
+			},
+			{
+				"inputLabel": "Client Certificate",
+				"inputKeyword": "sslCertFile",
+				"inputType": "file",
+				"inputPlaceholder": "Client Certificate",
+				"extensions": ["pem", "crt", "key"],
+				"dependency": {
+					"key": "https",
+					"value": true
+				}
+			},
+			{
+				"inputLabel": "Client Private Key",
+				"inputKeyword": "sslKeyFile",
+				"inputType": "file",
+				"inputPlaceholder": "Client Private Key",
+				"extensions": ["pem", "crt", "key"],
+				"dependency": {
+					"key": "https",
+					"value": true
+				}
+			}
+		]	
+	}
+]

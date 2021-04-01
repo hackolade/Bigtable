@@ -1,0 +1,204 @@
+/*
+* Copyright © 2016-2017 by IntegrIT S.A. dba Hackolade.  All rights reserved.
+*
+* The copyright to the computer software herein is the property of IntegrIT S.A.
+* The software may be used and/or copied only with the written permission of 
+* IntegrIT S.A. or in accordance with the terms and conditions stipulated in 
+* the agreement/contract under which the software has been supplied. 
+
+
+In order to define custom properties for any object's properties pane, you may copy/paste from the following,
+making sure that you maintain a proper JSON format.
+
+			{
+				"propertyName": "Simple text",
+				"propertyKeyword": "simpletextProp",
+				"shouldValidate": false,
+				"propertyType": "text",
+				"sampleGen": "&containerName|&entityName|&random|<value>"
+			},
+			{
+				"propertyName": "Text area",
+				"propertyKeyword": "textareaProp",
+				"propertyValidate": false,
+				"propertyTooltip": "Popup for multi-line text entry",
+				"propertyType": "details",
+				"template": "textarea"
+			},
+			{
+				"propertyName": "Dropdown selection",
+				"propertyKeyword": "dropdownProp",
+				"shouldValidate": false,
+				"propertyTooltip": "Select from list of options",
+				"propertyType": "select",
+				"options": [
+					"Option 1",
+					"Option 2",
+					"Option 3",
+					"Option 4"
+				]
+			},
+			{
+				"propertyName": "Numeric",
+				"propertyKeyword": "numericProp",
+				"propertyValidate": true,
+				"propertyType": "numeric",
+				"valueType": "number",
+				"allowNegative": false,
+				"sampleGen": "&containerName|&entityName|&random|<value>"
+			},
+			{
+				"propertyName": "Checkbox",
+				"propertyKeyword": "checkboxProp",
+				"shouldValidate": false,
+				"propertyType": "checkbox"
+			},
+			{
+				"propertyName": "Group",
+				"propertyType": "group",
+				"propertyKeyword": "grpProp",
+				"shouldValidate": true,
+				"propertyTooltip": "",
+				"structure": [
+					{
+						"propertyName": "Simple Grp Text",
+						"propertyKeyword": "simpleGrpText",
+						"shouldValidate": false,
+						"propertyTooltip": "",
+						"propertyType": "text"
+					},
+					{
+						"propertyName": "Group Number",
+						"propertyKeyword": "grpNumber",
+						"propertyValidate": true,
+						"propertyType": "numeric",
+						"valueType": "number",
+						"allowNegative": false
+					}
+				]
+			}
+
+*/
+
+[
+	{
+		"lowerTab": "Details",
+		"containerLevelKeys": [{
+			"labelName": "Row Key",
+			"propertyName": "Row Key",
+			"propertyKeyword": "Row Key",
+			"defaultName": "Row Key",
+			"propertyPrimaryKey": true,
+			"propertyType": "text",
+			"typeName": "Data type",
+			"typeOptions": [
+				"string"
+			],
+			"defaultType": "string",
+			"valueType": "string",
+			"disabledFieldOption": true
+		}],
+		"structure": [
+			{
+				"propertyName": "Description",
+				"propertyKeyword": "description",
+				"propertyTooltip": "description",
+				"propertyType": "details",
+				"template": "textarea"
+			},
+			{
+				"propertyName": "Instance ID",
+				"propertyKeyword": "instanceID",
+				"propertyTooltip": "ID is permanent",
+				"propertyType": "text"
+			},
+			{
+				"propertyName": "Cluster ID",
+				"propertyKeyword": "clusterID",
+				"propertyTooltip": "ID is permanent",
+				"propertyType": "text"
+			},
+			{
+				"propertyName": "Region",
+				"propertyKeyword": "region",
+				"propertyTooltip": "Choice is permanent. Determines where cluster data is stored. To reduce latency and increase throughput, store your data near the services that need it",
+				"propertyType": "select",
+				"options": [
+					"asia-east1",
+					"asia-east2",
+					"asia-northeast1",
+					"asia-northeast2",
+					"asia-northeast3",
+					"asia-south1",
+					"asia-southeast1",
+					"asia-southeast2",
+					"austraia-southeast1",
+					"europe-central2",
+					"europe-north1",
+					"europe-west1",
+					"europe-west2",
+					"europe-west3",
+					"europe-west4",
+					"europe-west6",
+					"southamerica-east1",
+					"us-central1",
+					"us-east1",
+					"us-east4",
+					"us-west1",
+					"us-west2",
+					"us-west3",
+					"us-west4"
+				]
+			},
+			{
+				"propertyName": "Zone",
+				"propertyKeyword": "zone",
+				"propertyTooltip": "Choice is permanent. Determines where cluster data is stored. To reduce latency and increase throughput, store your data near the services that need it",
+				"propertyType": "select",
+				"options": [
+					"Any",
+					"a",
+					"b",
+					"c"
+				]
+			},
+			{
+				"propertyName": "Number of nodes",
+				"propertyKeyword": "numberOfNodes",
+				"propertyType": "numeric",
+				"valueType": "number",
+				"allowNegative": false,
+				"step": 1
+			},
+			{
+				"propertyName": "Labels",
+				"propertyType": "group",
+				"propertyKeyword": "Labels",
+				"shouldValidate": true,
+				"propertyTooltip": "",
+				"structure": [
+					{
+						"propertyName": "Key",
+						"propertyKeyword": "labelKey",
+						"shouldValidate": false,
+						"propertyType": "text"
+					},
+					{
+						"propertyName": "Value",
+						"propertyKeyword": "labelValue",
+						"propertyValidate": false,
+						"propertyType": "text"
+					}
+				]
+			},
+			{
+				"propertyName": "Comments",
+				"propertyKeyword": "comments",
+				"shouldValidate": false,
+				"propertyTooltip": "comments",
+				"propertyType": "details",
+				"template": "textarea"
+			}
+		]
+	}
+]

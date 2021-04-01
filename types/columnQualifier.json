@@ -1,0 +1,21 @@
+{
+	"name": "colQual",
+	"erdAbbreviation": "<cQ>",
+	"dtdAbbreviation": "{...}",
+	"parentType": "array",
+	"defaultValues": {
+		"primaryKey": false,
+		"relationshipType": "",
+		"parentRelationship": "",
+		"childRelationships": [],
+		"foreignCollection": "",
+		"foreignField": [],
+		"properties": [],
+		"dependencies": [],
+		"minProperties": "",
+		"maxProperties": "",
+		"additionalProperties": false,
+		"enum": [],
+		"snippet": "timestamp"
+	}
+}

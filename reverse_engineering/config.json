@@ -1,0 +1,8 @@
+{
+	"errors": {
+		"NO_DATABASES": "There is no databases in HBase instance",
+		"WRONG_CONNECTION": "Can not connect to HBase instance"
+	},
+	"excludeDocKind": ["id"],
+	"connectionList": ["name", "host", "port"]
+}

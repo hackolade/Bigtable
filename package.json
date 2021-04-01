@@ -1,0 +1,25 @@
+{
+	"name": "Bitable",
+	"version": "0.0.1",
+	"versionDate": "2021-03-31",
+	"author": "hackolade",
+	"engines": {
+		"hackolade": "4.3.14",
+		"hackoladePlugin": "1.0.0"
+	},
+	"contributes": {
+		"target": {
+			"applicationTarget": "Bigtable",
+			"title": "Bigtable",
+			"versions": [
+			]
+		},
+		"features": {
+			"nestedCollections": false,
+			"jaySchemaHasRequiredPatternField": true,
+			"enableReverseEngineering": true,
+			"enableForwardEngineering": true
+		}
+	},
+	"description": "Hackolade plugin for Google Cloud Bigtable"
+}
