@@ -1,11 +1,6 @@
 {
-  "name": "HBase",
+  "name": "BigTable",
   "version": "1.0.0",
   "description": "",
-  "author": "Hackolade",
-  "dependencies": {
-    "async": "2.6.0",
-    "node-fetch": "^2.6.1"
-  },
-  "installed": true
+  "author": "Hackolade"
 }
